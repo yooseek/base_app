@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="72" viewBox="0 0 65 72">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.192" stop-color="#fff"/>
+      <stop offset="0.788" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_5087" data-name="그룹 5087" transform="translate(-184 -157)">
+    <g id="그룹_5086" data-name="그룹 5086" transform="translate(16.191 2.695)">
+      <path id="패스_2843" data-name="패스 2843" d="M.237.586,1.58,0,1.343,80.359,0,80.945Z" transform="translate(219.319 154.33) rotate(30)" fill="url(#linear-gradient)"/>
+      <text id="V" transform="translate(183.809 203.305)" fill="#f5f5f5" font-size="50" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-weight="700" font-style="italic" letter-spacing="0.015em"><tspan x="-15.75" y="0">V</tspan></text>
+      <text id="S" transform="translate(216.809 216.305)" fill="#f5f5f5" font-size="47" font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-weight="700" font-style="italic" letter-spacing="0.015em"><tspan x="-15.228" y="0">S</tspan></text>
+    </g>
+  </g>
+</svg>

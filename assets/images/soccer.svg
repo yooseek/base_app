@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.081" height="15.081" viewBox="0 0 15.081 15.081">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.188" y1="0.233" x2="0.861" y2="0.783" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0b98ff"/>
+      <stop offset="0.374" stop-color="#6affcb"/>
+      <stop offset="0.798" stop-color="#49fff1"/>
+      <stop offset="0.861" stop-color="#1bacfa"/>
+      <stop offset="1" stop-color="#0381ff"/>
+    </linearGradient>
+  </defs>
+  <path id="패스_465" data-name="패스 465" d="M9.54,17.081a7.54,7.54,0,1,1,7.54-7.54A7.54,7.54,0,0,1,9.54,17.081ZM7.3,15.143a2.262,2.262,0,1,1,4.478,0,6.052,6.052,0,0,0,3.364-3.364,2.262,2.262,0,1,1-.325-4.5q.072,0,.143,0,.092.006.182.019a6.052,6.052,0,0,0-3.364-3.364,2.285,2.285,0,0,1,.023.325,2.262,2.262,0,1,1-4.5-.325A6.052,6.052,0,0,0,3.937,7.3q.09-.013.182-.019.071,0,.143,0a2.262,2.262,0,1,1-.325,4.5A6.052,6.052,0,0,0,7.3,15.143Z" transform="translate(-2 -2)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+</svg>

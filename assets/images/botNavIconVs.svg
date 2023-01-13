@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g id="그룹_5524" data-name="그룹 5524" transform="translate(-249 -870)">
+        <text id="VS" transform="translate(264 891)" fill="#656565" font-size="16"
+            font-family="HelveticaNeue-BoldItalic, Helvetica Neue" font-weight="700"
+            font-style="italic" letter-spacing="-0.035em">
+            <tspan x="-9.944" y="0">VS</tspan>
+        </text>
+        <g id="타원_116" data-name="타원 116" transform="translate(249 870)" fill="none"
+            stroke="#656565" stroke-width="2">
+            <circle cx="15" cy="15" r="15" stroke="none" />
+            <circle cx="15" cy="15" r="14" fill="none" />
+        </g>
+    </g>
+</svg>
