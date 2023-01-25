@@ -29,7 +29,7 @@ class PhoneAndCert extends Equatable {
 
   @override
   String toString() {
-    return 'PhoneAndCert{phoneNum: $phoneNumber, certNum: $certNumber}';
+    return 'PhoneAndCert{phoneNumber: $phoneNumber, certNumber: $certNumber}';
   }
 
   @override

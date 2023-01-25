@@ -19,15 +19,14 @@ class _AuthAPI implements AuthAPI {
   String? baseUrl;
 
   @override
-  Future<WEDIDResponse<TokenResponse>> verifyPhoneCert(
-      {required request}) async {
+  Future<WEDIDResponse<dynamic>> verifyPhoneCert({required request}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(request.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<WEDIDResponse<TokenResponse>>(Options(
+        _setStreamType<WEDIDResponse<dynamic>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -39,9 +38,9 @@ class _AuthAPI implements AuthAPI {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = WEDIDResponse<TokenResponse>.fromJson(
+    final value = WEDIDResponse<dynamic>.fromJson(
       _result.data!,
-      (json) => TokenResponse.fromJson(json as Map<String, dynamic>),
+      (json) => json as dynamic,
     );
     return value;
   }

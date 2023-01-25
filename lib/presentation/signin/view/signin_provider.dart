@@ -9,9 +9,9 @@ class SigninProvider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<SigninBloc>(
+    return BlocProvider<SignInBloc>(
       create: (context) => serviceLocator(),
-      child: const SigninView(),
+      child: const SignInView(),
     );
   }
 }

@@ -47,5 +47,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+    <!-- Permission options for the `camera` group -->
+    <key>NSCameraUsageDescription</key>
+    <string>카메라 권한을 요청합니다.</string>
 </dict>
 </plist>

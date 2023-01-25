@@ -25,9 +25,12 @@ dependencies:
   go_router: ^6.0.1
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  intl: ^0.18.0
   json_annotation: ^4.7.0
+  permission_handler: ^10.2.0
   retrofit: ^3.3.1
   rxdart: ^0.27.7
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:
@@ -51,60 +54,15 @@ flutter:
     - assets/images/
     - assets/audio/
   fonts:
-    - family: Noto_Sans_KR
+    - family: NanumSquareNeo
       fonts:
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Thin.otf
-          weight: 100
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Light.otf
+        - asset: assets/fonts/nanum_square_neo/NanumSquareNeoOTF-aLt.otf
           weight: 200
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Regular.otf
+        - asset: assets/fonts/nanum_square_neo/NanumSquareNeoOTF-bRg.otf
           weight: 300
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Medium.otf
+        - asset: assets/fonts/nanum_square_neo/NanumSquareNeoOTF-cBd.otf
           weight: 400
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Bold.otf
+        - asset: assets/fonts/nanum_square_neo/NanumSquareNeoOTF-dEb.otf
           weight: 500
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Black.otf
+        - asset: assets/fonts/nanum_square_neo/NanumSquareNeoOTF-eHv.otf
           weight: 600
-
-    - family: 210_OmniGothic
-      fonts:
-        - asset: assets/fonts/210_OmniGothic/210_OmniGothic_010.otf
-          weight: 100
-        - asset: assets/fonts/210_OmniGothic/210_OmniGothic_020.otf
-          weight: 200
-        - asset: assets/fonts/210_OmniGothic/210_OmniGothic_030.otf
-          weight: 300
-        - asset: assets/fonts/210_OmniGothic/210_OmniGothic_040.otf
-          weight: 400
-        - asset: assets/fonts/210_OmniGothic/210_OmniGothic_050.otf
-          weight: 500
-
-    - family: 210_MGothic
-      fonts:
-        - asset: assets/fonts/210_MGothic/210_MGothic_010.otf
-          weight: 100
-        - asset: assets/fonts/210_MGothic/210_MGothic_020.otf
-          weight: 200
-        - asset: assets/fonts/210_MGothic/210_MGothic_030.otf
-          weight: 300
-        - asset: assets/fonts/210_MGothic/210_MGothic_040.otf
-          weight: 400
-        - asset: assets/fonts/210_MGothic/210_MGothic_050.otf
-          weight: 500
-        - asset: assets/fonts/210_MGothic/210_MGothic_060.otf
-          weight: 600
-        - asset: assets/fonts/210_MGothic/210_MGothic_070.otf
-          weight: 700
-        - asset: assets/fonts/210_MGothic/210_MGothic_080.otf
-          weight: 800
-        - asset: assets/fonts/210_MGothic/210_MGothic_090.otf
-          weight: 900
-
-    - family: KoPubDotum
-      fonts:
-        - asset: assets/fonts/ko_pub_dotum/KoPubDotumBold.ttf
-          weight: 800
-        - asset: assets/fonts/ko_pub_dotum/KoPubDotumMedium.ttf
-          weight: 500
-        - asset: assets/fonts/ko_pub_dotum/KoPubDotumLight.ttf
-          weight: 200

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'package:withapp_did/injection_container.dart';
+import 'package:withapp_did/core/wedid_core.dart';
 import 'package:withapp_did/data/wedid_data.dart';
 import 'package:withapp_did/domain/wedid_domain.dart';
-import 'package:withapp_did/injection_container.dart';
 import 'package:withapp_did/presentation/wedid_presentation.dart';
 
 class HomeView extends StatelessWidget {
@@ -15,12 +17,12 @@ class HomeView extends StatelessWidget {
 
       },
       builder: (context, state) {
-        return Scaffold(
-          body: Center(
+        return WEDIDScaffold(
+          child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('homeview'),
+                Text('home',style: WEDIDTextStyle.nanumSquareNeoE),
                 SizedBox(height: 100),
                 TextButton(child: Text('로그아웃'), onPressed: () {
                   serviceLocator<AuthRepository>().signOutAuth();

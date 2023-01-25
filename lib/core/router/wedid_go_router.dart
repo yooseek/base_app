@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:withapp_did/domain/wedid_domain.dart';
 import 'package:withapp_did/injection_container.dart';
 
 import 'package:withapp_did/presentation/wedid_presentation.dart' hide GoRouterState;
@@ -30,9 +29,21 @@ class WEDIDGoRouterConfig {
       builder: (context, state) => const SplashView(),
     ),
     GoRoute(
+      path: '/onboard',
+      name: 'onboard',
+      builder: (context, state) => const OnboardProvider(),
+    ),
+    GoRoute(
       path: '/signIn',
       name: 'signIn',
       builder: (context, state) => const SigninProvider(),
+      routes: [
+        GoRoute(
+          path: 'changePhoneNum',
+          name: 'changePhoneNum',
+          builder: (context, state) => const SigninChangePhoneNumberProvider(),
+        ),
+      ]
     ),
     GoRoute(
       path: '/signUp',
@@ -51,12 +62,12 @@ class WEDIDGoRouterConfig {
 
     final authStatus = state.status;
 
-    final signin = goState.location == '/signIn';
-    final signup = goState.location == '/signUp';
+    final onboard = goState.location == '/onboard';
+    final signin = goState.location.contains('/signIn');
+    final signup = goState.location.contains('/signUp');
 
-
-    if(authStatus == GoRouterAuth.unAuth && !signin &&!signup) {
-      return '/signIn';
+    if(authStatus == GoRouterAuth.unAuth && !onboard && !signin &&!signup) {
+      return '/onboard';
     }
 
     return null;

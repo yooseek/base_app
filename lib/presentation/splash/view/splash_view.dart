@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:withapp_did/core/wedid_core.dart';
 import 'package:withapp_did/presentation/wedid_presentation.dart';
 
 class SplashView extends StatelessWidget {
@@ -15,7 +16,7 @@ class SplashView extends StatelessWidget {
           context.goNamed('home');
           return;
         } else if (state is SplashUnAuth) {
-          context.goNamed('signIn');
+          context.goNamed('onboard');
           return;
         } else if (state is SplashError) {
           context.goNamed('splash');
@@ -25,8 +26,8 @@ class SplashView extends StatelessWidget {
           return;
         }
       },
-      child: Scaffold(
-        body: Center(
+      child: WEDIDScaffold(
+        child: Center(
           child: Text('splash'),
         ),
       ),

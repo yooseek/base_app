@@ -12,7 +12,7 @@ abstract class AuthAPI {
   factory AuthAPI(Dio dio, {String baseUrl}) = _AuthAPI;
 
   @POST('/verify')
-  Future<WEDIDResponse<TokenResponse>> verifyPhoneCert({@Body() required PhoneAndCert request});
+  Future<WEDIDResponse<dynamic>> verifyPhoneCert({@Body() required PhoneAndCert request});
 
   @PUT('/cert')
   Future<WEDIDResponse<bool>> getPhoneCert({@Body() required PhoneNumber request});

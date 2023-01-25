@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:withapp_did/injection_container.dart';
+import 'package:withapp_did/core/wedid_core.dart';
 import 'package:withapp_did/presentation/wedid_presentation.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,12 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(360, 690));
-
     return MultiBlocProvider(
       providers: [
         BlocProvider<SplashBloc>(create: (context) => serviceLocator()..add(const SplashInitEvent())),
         BlocProvider<GoRouterBloc>(create: (context) => serviceLocator()),
+        BlocProvider<DialogBloc>(create: (context) => serviceLocator()),
       ],
       child: const MyAppView(),
     );
@@ -30,11 +30,25 @@ class MyAppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      routerConfig: serviceLocator<GoRouter>(),
+
+    return ScreenUtilInit(
+      designSize: const Size(393, 852),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (BuildContext context, Widget? child) {
+        return MaterialApp.router(
+          scrollBehavior: MyCustomScrollBehavior(),
+          theme: WEDIDTheme(),
+          routerConfig: serviceLocator<GoRouter>(),
+        );
+      },
     );
+  }
+}
+
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Widget buildOverscrollIndicator(context, child,details) {
+    return child;
   }
 }

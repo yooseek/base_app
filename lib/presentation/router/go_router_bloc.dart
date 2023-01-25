@@ -7,9 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:withapp_did/domain/wedid_domain.dart';
 
 part 'go_router_event.dart';
+
 part 'go_router_state.dart';
 
-class GoRouterBloc extends Bloc<GoRouterEvent, GoRouterState> with ChangeNotifier{
+class GoRouterBloc extends Bloc<GoRouterEvent, GoRouterState>
+    with ChangeNotifier {
   final AuthRepository authRepository;
   late final StreamSubscription streamSubscription;
 
@@ -19,14 +21,18 @@ class GoRouterBloc extends Bloc<GoRouterEvent, GoRouterState> with ChangeNotifie
     });
 
     on<ChangeAuthEvent>((event, emit) {
-      switch(event.status){
+      switch (event.status) {
         case AuthStatus.auth:
           emit(state.copyWith(status: GoRouterAuth.auth));
           break;
         case AuthStatus.unAuth:
           emit(state.copyWith(status: GoRouterAuth.unAuth));
-      break;
-    }
+          break;
+        case AuthStatus.init:
+          break;
+        case AuthStatus.error:
+          break;
+      }
       notifyListeners();
     });
   }
